@@ -1,23 +1,19 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar.js';
-import HomePage from './pages/HomePage/HomePage.js';
-import AboutMePage from './pages/AboutMePage/AboutMePage.js';
-import ProjectsPage from './pages/ProjectsPage/ProjectsPage.js';
-import ContactPage from './pages/ContactPage/ContactPage.js';
+import React from 'react'
+import NavBar from './components/NavBar/NavBar';
+import HomePage from './pages/HomePage/HomePage';
+import AboutMePage from './pages/AboutMePage/AboutMePage';
+import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-          <>
-          <NavBar />
-           <Routes>
-            <Route path="/" element={<HomePage  /> } />
-            <Route path="/aboutme" element={<AboutMePage /> } />
-            <Route path="/projects" element={<ProjectsPage  /> } /> 
-            <Route path="/contact" element={<ContactPage  /> } />
-           </Routes>
-           </>
+    <div>
+            <NavBar />
+            <HomePage />
+            <AboutMePage />
+            <ProjectsPage /> 
+            <ContactPage />
       </div>
   );
 }
